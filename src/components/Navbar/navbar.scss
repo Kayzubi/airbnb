@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  height: 60px;
+  height: 80px;
   border-bottom: 1px solid #e7e7e7;
 
   &__brand {
@@ -26,6 +26,8 @@
     padding: 1rem 0;
     color: #a3a5a3;
     height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .active {
