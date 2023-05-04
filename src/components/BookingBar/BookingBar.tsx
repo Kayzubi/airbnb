@@ -15,10 +15,10 @@ const BookingBar = () => {
     <div className='booking'>
       <div className='booking__options'>
         <span className='active'>
-          <HiOutlineSquares2X2 size={24} />
+          <HiOutlineSquares2X2 size={20} />
         </span>
         <span>
-          <FaRegMap size={24} />
+          <FaRegMap size={20} />
         </span>
       </div>
       <div className='booking__search'>

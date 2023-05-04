@@ -1,0 +1,55 @@
+.sidebar {
+  width: 100px;
+  border-right: 1px solid #e7e7e7;
+  padding: 1rem 0;
+  color: #414141;
+
+  p {
+    margin-bottom: 0;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+  }
+
+  span {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem 2rem;
+    gap: 10px;
+    height: 60px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e7e7e7;
+    }
+  }
+
+  .active {
+    position: relative;
+    font-weight: 600;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      height: 100%;
+      background-color: #ff385c;
+      width: 3px;
+    }
+  }
+
+  &:hover {
+    p {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

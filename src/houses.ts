@@ -1,10 +1,36 @@
-import { house1images } from './assets'
+import {
+  house1images,
+  house2images,
+  house3images,
+  house4images,
+} from './assets'
 
-export const housesData = [
+export interface HouseDataTypes {
+  id: number
+  name: string
+  location: string
+  price_per_night: number
+  images: string[]
+  beds: number
+  rooms: number
+  guests: number
+  baths: number
+  ratings: {
+    cleanliness: number
+    accuracy: number
+    communication: number
+    location: number
+    check_in: number
+    value: number
+  }
+}
+
+export const housesData: HouseDataTypes[] = [
   {
     id: 1,
     name: 'Whitefish Estate',
-    location: 'Whitefish, Montana, United States',
+    location:
+      '(571) 312-5588 5500 Holmes Run Pky Alexandria, Virginia(VA), 22304',
     price_per_night: 10000,
     images: house1images,
     beds: 8,
@@ -22,10 +48,10 @@ export const housesData = [
   },
   {
     id: 2,
-    name: '',
-    location: '',
-    price_per_night: '',
-    images: [],
+    name: 'Luxury stay in Weston, Saint James, Barbados',
+    location: '(330) 755-4211 3420 New Castle Rd Lowellville, Ohio(OH), 44436',
+    price_per_night: 1500,
+    images: house2images,
     beds: 5,
     rooms: 4,
     guests: 8,
@@ -41,10 +67,11 @@ export const housesData = [
   },
   {
     id: 3,
-    name: '',
-    location: '',
-    price_per_night: '',
-    images: [],
+    name: 'Numero 22 - Lake Como - Design Living & Lake View',
+    location:
+      '(910) 452-9751 4304 Pennhurst Ct Wilmington, North Carolina(NC), 28405',
+    price_per_night: 850,
+    images: house3images,
     beds: 5,
     rooms: 4,
     guests: 8,
@@ -60,10 +87,11 @@ export const housesData = [
   },
   {
     id: 4,
-    name: '',
-    location: '',
-    price_per_night: '',
-    images: [],
+    name: '7,500 sq ft Private Beachfront Estate',
+    location:
+      '(561) 243-2816 2837 Cormorant Rd Delray Beach, Florida(FL), 33444',
+    price_per_night: 3500,
+    images: house4images,
     beds: 5,
     rooms: 4,
     guests: 8,
@@ -79,9 +107,9 @@ export const housesData = [
   },
   {
     id: 5,
-    name: '',
-    location: '',
-    price_per_night: '',
+    name: 'Palm Springs Bungalow Hideaway',
+    location: '(608) 339-8202 1445 Evergreen CtAdams, Wisconsin(WI), 53910',
+    price_per_night: 2600,
     images: [],
     beds: 5,
     rooms: 4,
@@ -98,9 +126,10 @@ export const housesData = [
   },
   {
     id: 6,
-    name: '',
-    location: '',
-    price_per_night: '',
+    name: 'Sandy Beachfront Oasis',
+    location:
+      '(626) 962-3557 1016 W El Dorado St West Covina, California(CA), 91790',
+    price_per_night: 864,
     images: [],
     beds: 5,
     rooms: 4,
@@ -117,9 +146,9 @@ export const housesData = [
   },
   {
     id: 7,
-    name: '',
-    location: '',
-    price_per_night: '',
+    name: 'The Secret Westside Lounge',
+    location: '(678) 493-5626 123 Farm Valley Dr Canton, Georgia(GA), 30115',
+    price_per_night: 4325,
     images: [],
     beds: 5,
     rooms: 4,
@@ -136,9 +165,10 @@ export const housesData = [
   },
   {
     id: 8,
-    name: '',
-    location: '',
-    price_per_night: '',
+    name: 'Hawthorne Crown Jewel',
+    location:
+      '(931) 598-9460 19470 S Pittsburg Mountain Rd Sewanee, Tennessee(TN), 37375',
+    price_per_night: 3500,
     images: [],
     beds: 5,
     rooms: 4,
@@ -155,9 +185,10 @@ export const housesData = [
   },
   {
     id: 9,
-    name: '',
-    location: '',
-    price_per_night: '',
+    name: 'The Bungalow at 7th Avenue',
+    location:
+      '(252) 441-0202 5515 S Virginia Dare Trl Nags Head, North Carolina(NC),',
+    price_per_night: 2250,
     images: [],
     beds: 5,
     rooms: 4,
@@ -174,9 +205,9 @@ export const housesData = [
   },
   {
     id: 10,
-    name: '',
-    location: '',
-    price_per_night: '',
+    name: 'Downtown Penthouse Oasis',
+    location: '(508) 869-6780 2 Orient St Boylston, Massachusetts(MA), 01505',
+    price_per_night: 1475,
     images: [],
     beds: 5,
     rooms: 4,
@@ -193,9 +224,10 @@ export const housesData = [
   },
   {
     id: 11,
-    name: '',
-    location: '',
-    price_per_night: '',
+    name: 'Sandy Beachfront Oasis',
+    location:
+      '(605) 487-7736 1224 School St Lake Andes, South Dakota(SD), 57356',
+    price_per_night: 745,
     images: [],
     beds: 5,
     rooms: 4,
@@ -212,9 +244,10 @@ export const housesData = [
   },
   {
     id: 12,
-    name: '',
-    location: '',
-    price_per_night: '',
+    name: 'Palm Springs Bungalow Hideaway',
+    location:
+      '(843) 569-6361 1005 Green Castle Dr Goose Creek, South Carolina(SC), 29445',
+    price_per_night: 2347,
     images: [],
     beds: 5,
     rooms: 4,
@@ -231,9 +264,9 @@ export const housesData = [
   },
   {
     id: 13,
-    name: '',
-    location: '',
-    price_per_night: '',
+    name: 'West Shore Country Hale',
+    location: '(714) 892-1235 7766 13th St Westminster, California(CA), 92683',
+    price_per_night: 1400,
     images: [],
     beds: 5,
     rooms: 4,
