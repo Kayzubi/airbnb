@@ -6,6 +6,7 @@
 
   p {
     margin-bottom: 0;
+    text-transform: capitalize;
     white-space: nowrap;
     visibility: hidden;
     opacity: 0;
@@ -34,7 +35,7 @@
 
   .active {
     position: relative;
-    font-weight: 600;
+    font-weight: 500;
 
     &::after {
       content: '';

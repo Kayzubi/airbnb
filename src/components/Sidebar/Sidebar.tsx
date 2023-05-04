@@ -96,7 +96,10 @@ const Sidebar = () => {
   ]
 
   return (
-    <motion.div whileHover={{ width: '250px' }} className='sidebar'>
+    <motion.div
+      whileHover={{ width: '250px' }}
+      transition={{ duration: 0.5 }}
+      className='sidebar'>
       {sidebarOptions.map((item, index) => (
         <div
           key={index}

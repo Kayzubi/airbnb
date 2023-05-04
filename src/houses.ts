@@ -1,8 +1,17 @@
 import {
+  house10images,
+  house11images,
+  house12images,
+  house13images,
   house1images,
   house2images,
   house3images,
   house4images,
+  house5images,
+  house6images,
+  house7images,
+  house8images,
+  house9images,
 } from './assets'
 
 export interface HouseDataTypes {
@@ -15,6 +24,7 @@ export interface HouseDataTypes {
   rooms: number
   guests: number
   baths: number
+  average_rating: number
   ratings: {
     cleanliness: number
     accuracy: number
@@ -37,6 +47,7 @@ export const housesData: HouseDataTypes[] = [
     rooms: 8,
     guests: 16,
     baths: 8,
+    average_rating: 5,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -56,6 +67,7 @@ export const housesData: HouseDataTypes[] = [
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 4.5,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -76,6 +88,7 @@ export const housesData: HouseDataTypes[] = [
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 4.8,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -96,6 +109,7 @@ export const housesData: HouseDataTypes[] = [
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 4.7,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -110,11 +124,12 @@ export const housesData: HouseDataTypes[] = [
     name: 'Palm Springs Bungalow Hideaway',
     location: '(608) 339-8202 1445 Evergreen CtAdams, Wisconsin(WI), 53910',
     price_per_night: 2600,
-    images: [],
+    images: house5images,
     beds: 5,
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 4.5,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -130,11 +145,12 @@ export const housesData: HouseDataTypes[] = [
     location:
       '(626) 962-3557 1016 W El Dorado St West Covina, California(CA), 91790',
     price_per_night: 864,
-    images: [],
+    images: house6images,
     beds: 5,
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 5,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -149,11 +165,12 @@ export const housesData: HouseDataTypes[] = [
     name: 'The Secret Westside Lounge',
     location: '(678) 493-5626 123 Farm Valley Dr Canton, Georgia(GA), 30115',
     price_per_night: 4325,
-    images: [],
+    images: house7images,
     beds: 5,
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 4.8,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -169,11 +186,12 @@ export const housesData: HouseDataTypes[] = [
     location:
       '(931) 598-9460 19470 S Pittsburg Mountain Rd Sewanee, Tennessee(TN), 37375',
     price_per_night: 3500,
-    images: [],
+    images: house8images,
     beds: 5,
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 5,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -189,11 +207,12 @@ export const housesData: HouseDataTypes[] = [
     location:
       '(252) 441-0202 5515 S Virginia Dare Trl Nags Head, North Carolina(NC),',
     price_per_night: 2250,
-    images: [],
+    images: house9images,
     beds: 5,
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 4.9,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -208,11 +227,12 @@ export const housesData: HouseDataTypes[] = [
     name: 'Downtown Penthouse Oasis',
     location: '(508) 869-6780 2 Orient St Boylston, Massachusetts(MA), 01505',
     price_per_night: 1475,
-    images: [],
+    images: house10images,
     beds: 5,
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 5,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -228,11 +248,12 @@ export const housesData: HouseDataTypes[] = [
     location:
       '(605) 487-7736 1224 School St Lake Andes, South Dakota(SD), 57356',
     price_per_night: 745,
-    images: [],
+    images: house11images,
     beds: 5,
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 4.5,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -248,11 +269,12 @@ export const housesData: HouseDataTypes[] = [
     location:
       '(843) 569-6361 1005 Green Castle Dr Goose Creek, South Carolina(SC), 29445',
     price_per_night: 2347,
-    images: [],
+    images: house12images,
     beds: 5,
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 4.9,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
@@ -267,11 +289,12 @@ export const housesData: HouseDataTypes[] = [
     name: 'West Shore Country Hale',
     location: '(714) 892-1235 7766 13th St Westminster, California(CA), 92683',
     price_per_night: 1400,
-    images: [],
+    images: house13images,
     beds: 5,
     rooms: 4,
     guests: 8,
     baths: 4,
+    average_rating: 4.7,
     ratings: {
       cleanliness: 5,
       accuracy: 4.5,
