@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import './houseDetails.scss'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { MdClose } from 'react-icons/md'
 import { HouseDataTypes } from '../../houses'
 import Checkout from '../Checkout/Checkout'
@@ -30,49 +30,48 @@ const HouseDetails: FC<Props> = ({ close, data }) => {
     average_rating,
   } = data
   return (
-    <AnimatePresence>
-      <div className='house-modal'>
-        <div className='house-modal__background' onClick={close}></div>
-        <motion.button
-          initial={{ opacity: 0, x: '100%' }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className='btn__close'
-          type='button'
-          onClick={close}>
-          <MdClose />
-        </motion.button>
+    <div className='house-modal'>
+      <div className='house-modal__background' onClick={close}></div>
+      <motion.button
+        initial={{ opacity: 0, x: '100%' }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ x: '100%', opacity: 0 }}
+        transition={{ duration: 0.5 }}
+        className='btn__close'
+        type='button'
+        onClick={close}>
+        <MdClose />
+      </motion.button>
 
-        <motion.div
-          initial={{ x: '100%' }}
-          animate={{ x: 0 }}
-          exit={{ x: '100%' }}
-          key={data.id}
-          transition={{ duration: 0.5 }}
-          className='house-modal__content'>
-          <div className='house-details'>
-            <HouseImages images={images} />
-            <div className='house-details__content'>
-              <Checkout price={price_per_night} />
-              <div className='house-details__content--info'>
-                <HouseInfo
-                  name={name}
-                  location={location}
-                  rooms={rooms}
-                  guests={guests}
-                  beds={beds}
-                  baths={baths}
-                />
-                <AboutHouse />
-                <Reviews data={ratings} rating={average_rating} />
-                <Location location={location} />
-                <Host />
-              </div>
+      <motion.div
+        initial={{ x: '100%' }}
+        animate={{ x: 0 }}
+        exit={{ x: '100%' }}
+        key={data.id}
+        transition={{ duration: 0.5 }}
+        className='house-modal__content'>
+        <div className='house-details'>
+          <HouseImages images={images} />
+          <div className='house-details__content'>
+            <Checkout price={price_per_night} rating={average_rating} />
+            <div className='house-details__content--info'>
+              <HouseInfo
+                name={name}
+                location={location}
+                rooms={rooms}
+                guests={guests}
+                beds={beds}
+                baths={baths}
+              />
+              <AboutHouse />
+              <Reviews data={ratings} rating={average_rating} />
+              <Location location={location} />
+              <Host />
             </div>
           </div>
-        </motion.div>
-      </div>
-    </AnimatePresence>
+        </div>
+      </motion.div>
+    </div>
   )
 }
 

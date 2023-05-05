@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Row } from 'react-bootstrap'
 import HouseCard from './HouseCard'
 import { HouseDataTypes, housesData } from '../../houses'
+import { AnimatePresence } from 'framer-motion'
 import HouseDetails from '../HouseDetails/HouseDetails'
 
 const HouseList = () => {
@@ -21,9 +22,12 @@ const HouseList = () => {
 
   return (
     <div className='w-100'>
-      {activeHouse && (
-        <HouseDetails close={closeHouseDetails} data={activeHouse} />
-      )}
+      <AnimatePresence>
+        {activeHouse && (
+          <HouseDetails close={closeHouseDetails} data={activeHouse} />
+        )}
+      </AnimatePresence>
+
       <Row>
         {housesData.map((item) => (
           <HouseCard

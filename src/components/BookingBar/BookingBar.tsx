@@ -10,7 +10,11 @@ import { HiOutlineFilter } from 'react-icons/hi'
 import { FaRegMap } from 'react-icons/fa'
 import './booking.scss'
 
-const BookingBar = () => {
+type Prop = {
+  showFilter: () => void
+}
+
+const BookingBar = ({ showFilter }: Prop) => {
   return (
     <div className='booking'>
       <div className='booking__options'>
@@ -24,7 +28,7 @@ const BookingBar = () => {
       <div className='booking__search'>
         <div className='booking__select'>
           <p>Anywhere</p>
-          <HiOutlineChevronDown />
+          <HiOutlineChevronDown className='ms-auto' />
         </div>
         <div className='booking__select'>
           <HiOutlineCalendar size={20} />
@@ -41,7 +45,7 @@ const BookingBar = () => {
         </div>
       </div>
       <div className='booking__filter'>
-        <span>
+        <span onClick={showFilter}>
           <HiOutlineFilter />
         </span>
       </div>

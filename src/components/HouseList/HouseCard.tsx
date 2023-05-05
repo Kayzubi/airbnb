@@ -25,7 +25,7 @@ const HouseCard: FC<Props> = ({ data, showHouseDetails }) => {
           <HiOutlineHeart />
         </div>
         <div className='house-card__image'>
-          <img src={house2images[0]} alt='' />
+          <img src={images[0]} alt='' />
         </div>
         <div className='house-card__content'>
           <h2>{name}</h2>

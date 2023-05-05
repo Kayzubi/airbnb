@@ -1,6 +1,7 @@
 import React from 'react'
 import { icons } from '../../assets'
 import profile from '../../assets/profile picture.jpg'
+import { MdOutlineMenu } from 'react-icons/md'
 import './navbar.scss'
 const Navbar = () => {
   return (
@@ -16,6 +17,7 @@ const Navbar = () => {
       <div className='navigation__user'>
         <img src={profile} alt='user-pic' />
       </div>
+      <MdOutlineMenu size={32} className='hamburgar' />
     </div>
   )
 }

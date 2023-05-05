@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdOutlineShield, MdOutlineStar } from 'react-icons/md'
 import { GiMedal } from 'react-icons/gi'
+import profile from '../../assets/profile picture.jpg'
 
 const Host = () => {
   return (
@@ -9,7 +10,7 @@ const Host = () => {
       <div className='host__top-content'>
         <div className='review_header'>
           <div className='review_header-image'>
-            <img src='' alt='' />
+            <img src={profile} alt='' />
           </div>
           <div className='review_header-user'>
             <h6>Hosted by Brenda</h6>

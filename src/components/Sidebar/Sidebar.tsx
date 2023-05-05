@@ -21,7 +21,6 @@ import {
   GiCactus,
 } from 'react-icons/gi'
 import './sidebar.scss'
-import { motion } from 'framer-motion'
 
 const Sidebar = () => {
   const sidebarOptions = [
@@ -96,10 +95,7 @@ const Sidebar = () => {
   ]
 
   return (
-    <motion.div
-      whileHover={{ width: '250px' }}
-      transition={{ duration: 0.5 }}
-      className='sidebar'>
+    <div className='sidebar'>
       {sidebarOptions.map((item, index) => (
         <div
           key={index}
@@ -108,7 +104,7 @@ const Sidebar = () => {
           <p>{item.title}</p>
         </div>
       ))}
-    </motion.div>
+    </div>
   )
 }
 

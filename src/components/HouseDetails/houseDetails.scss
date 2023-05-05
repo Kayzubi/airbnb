@@ -29,6 +29,13 @@
     z-index: 1200;
     padding: 2rem;
     overflow: auto;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .btn__close {
@@ -79,11 +86,12 @@
   &__content {
     padding: 2rem 0;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 1.2fr;
+    gap: 30px;
 
     &--checkout {
       grid-column: 2/3;
-      padding: 1rem;
+      padding: 1rem 0 1rem 0.5rem;
     }
     &--info {
       grid-column: 1/2;
@@ -301,5 +309,125 @@
         font-size: 14px;
       }
     }
+  }
+}
+
+.checkout__container {
+  position: sticky;
+  top: 0;
+}
+
+.checkout {
+  background-color: #f5f5f4;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    b {
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    span {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  &__date {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  &__breakdown {
+    padding: 2rem 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  &__desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__button {
+    margin-bottom: 15px;
+    button {
+      height: 50px;
+      width: 100%;
+      font-weight: 600;
+      font-size: 14px;
+      background-color: #ff385c;
+      border-radius: 12px;
+      color: #fff;
+    }
+  }
+}
+
+.total__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+
+  small {
+    font-size: 12px;
+    display: block;
+  }
+}
+
+.form__group {
+  width: 100%;
+  margin-bottom: 20px;
+  p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  &-input {
+    background-color: #fff;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 14px;
+
+    &:hover {
+      border: 1px solid #000;
+    }
+  }
+}
+
+.gem__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 25px 0;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #d43b510a;
+
+  p {
+    font-size: 14px;
   }
 }

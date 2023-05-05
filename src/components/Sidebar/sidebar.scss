@@ -1,8 +1,11 @@
+@use '../../breakpoints.scss' as breakpoints;
+
 .sidebar {
   width: 100px;
   border-right: 1px solid #e7e7e7;
   padding: 1rem 0;
   color: #414141;
+  transition: all 0.3s;
 
   p {
     margin-bottom: 0;
@@ -10,7 +13,7 @@
     white-space: nowrap;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.4s;
+    transition: all 0.1s;
   }
 
   span {
@@ -48,9 +51,68 @@
   }
 
   &:hover {
+    width: 250px;
     p {
       visibility: visible;
       opacity: 1;
+    }
+  }
+}
+
+@include breakpoints.tablet {
+  .sidebar {
+    overflow: auto;
+    width: 100%;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 0 1rem;
+
+    &:hover {
+      width: 100%;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    p {
+      display: none;
+    }
+
+    span {
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sidebar__item {
+      display: inline-flex;
+      margin-right: 20px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e7e7e7;
+      }
+    }
+
+    .active {
+      position: relative;
+      font-weight: 500;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background-color: #ff385c;
+        width: 100%;
+      }
     }
   }
 }
