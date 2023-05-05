@@ -1,6 +1,7 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { Col } from 'react-bootstrap'
 import { MdOutlineStar } from 'react-icons/md'
+import { HiOutlineHeart } from 'react-icons/hi2'
 import './housecard.scss'
 import { HouseDataTypes } from '../../houses'
 import { numberWithCommas } from '../../utilities'
@@ -8,14 +9,21 @@ import { house2images } from '../../assets'
 
 interface Props {
   data: HouseDataTypes
+  showHouseDetails: (house: HouseDataTypes) => void
 }
 
-const HouseCard: FC<Props> = ({ data }) => {
+const HouseCard: FC<Props> = ({ data, showHouseDetails }) => {
   const { name, location, images, price_per_night, average_rating } = data
+  const [liked, setLiked] = useState(false)
 
   return (
     <Col lg='3' md='6' className='p-4'>
-      <div className='house-card'>
+      <div className='house-card' onClick={() => showHouseDetails(data)}>
+        <div
+          className={`likeBtn ${liked ? 'liked' : ''}`}
+          onClick={() => setLiked(!liked)}>
+          <HiOutlineHeart />
+        </div>
         <div className='house-card__image'>
           <img src={house2images[0]} alt='' />
         </div>

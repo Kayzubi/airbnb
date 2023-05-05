@@ -27,7 +27,7 @@ const BookingBar = () => {
           <HiOutlineChevronDown />
         </div>
         <div className='booking__select'>
-          <HiOutlineCalendar size={24} />
+          <HiOutlineCalendar size={20} />
           <p>August 21-26</p>
         </div>
         <div className='booking__select'>
