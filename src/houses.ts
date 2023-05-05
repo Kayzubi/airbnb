@@ -18,20 +18,24 @@ export const reviews = [
   {
     user: 'Steve',
     date: 'May 2023',
+    image: '',
     message: `Abbe's place was so wonderful and just what I needed. It was the perfect escape with a great wood stove, beautiful views, horses, and nearby skiing. I'm so grateful.`,
   },
   {
     user: 'Emily',
+    image: '',
     date: 'May 2023',
     message: `The location was very quiet and peaceful. We loved the wood stove and the location was convenient, however the interior was not in the best shape.`,
   },
   {
     user: 'Micheal',
+    image: '',
     date: 'May 2023',
     message: `Overall a decent stay. I appreciated having a kitchen and access to firewood for the stove which heated up the little cabin very effectively.`,
   },
   {
     user: 'Jackson',
+    image: '',
     date: 'May 2023',
     message: `Abbe’s tiny house was a perfect spot to spend the weekend while skiing in the Tetons. The space was comfortable and the wood stove kept us very warm.`,
   },

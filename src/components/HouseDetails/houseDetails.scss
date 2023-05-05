@@ -22,7 +22,7 @@
     position: fixed;
     right: 0;
     top: 0;
-    height: 100%;
+    height: 100vh;
     width: 75%;
     background-color: #fff;
     opacity: 1;
@@ -54,7 +54,6 @@
 }
 
 .house-details {
-  margin-bottom: 1000px;
   &__images {
     height: 500px;
   }
@@ -228,12 +227,79 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 30px;
+  &:only-child {
+    margin-bottom: 30px;
+  }
   &-image {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     overflow: hidden;
     background-color: #000;
+  }
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 25rem;
+  width: 100%;
+  margin: 0 auto 2rem;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 25rem;
+  width: 100%;
+  border-radius: 20px;
+  //   max-width: 40rem;
+}
+
+.location {
+  @extend .about__section;
+  h5 {
+    margin-bottom: 2rem;
+  }
+
+  &__about {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.host {
+  padding: 3rem 0 1rem;
+  &__top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  &__contact {
+    padding: 8px 24px;
+    border: 1px solid #717171;
+    border-radius: 12px;
+
+    &:hover {
+      border: 1px solid #d43b51;
+    }
+  }
+
+  &__badges {
+    padding: 20px 0;
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      margin-right: 20px;
+      font-size: 26px;
+
+      small {
+        font-size: 14px;
+      }
+    }
   }
 }

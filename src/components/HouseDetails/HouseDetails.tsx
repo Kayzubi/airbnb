@@ -8,6 +8,8 @@ import HouseInfo from '../HouseInfo/HouseInfo'
 import HouseImages from '../HouseInfo/HouseImages'
 import AboutHouse from '../HouseInfo/AboutHouse'
 import Reviews from '../HouseInfo/Reviews'
+import Location from '../HouseInfo/Location'
+import Host from '../HouseInfo/Host'
 
 interface Props {
   close: () => void
@@ -63,6 +65,8 @@ const HouseDetails: FC<Props> = ({ close, data }) => {
                 />
                 <AboutHouse />
                 <Reviews data={ratings} rating={average_rating} />
+                <Location location={location} />
+                <Host />
               </div>
             </div>
           </div>

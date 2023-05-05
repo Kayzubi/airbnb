@@ -29,13 +29,15 @@ const Reviews = ({ data, rating }: Prop) => {
         {reviews.map((item, index) => (
           <Col lg='6' key={index}>
             <div className='user_reviews'>
-              <div className='review_header'>
-                <div className='review_header-image'>
-                  <img src='' alt='' />
-                </div>
-                <div className='review_header-user'>
-                  <h6>{item.user}</h6>
-                  <small>{item.date}</small>
+              <div>
+                <div className='review_header'>
+                  <div className='review_header-image'>
+                    <img src={item.image} alt='' />
+                  </div>
+                  <div className='review_header-user'>
+                    <h6>{item.user}</h6>
+                    <small>{item.date}</small>
+                  </div>
                 </div>
               </div>
               <p>{item.message}</p>
