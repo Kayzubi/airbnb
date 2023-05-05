@@ -16,7 +16,7 @@ const HouseCard: FC<Props> = ({ data, showHouseDetails }) => {
   const [liked, setLiked] = useState(false)
 
   return (
-    <Col lg='3' md='6' className='pt-3 ps-0 pe-3'>
+    <Col lg='3' md='6' className='pt-3 ps-0 pe-4'>
       <div className='house-card' onClick={() => showHouseDetails(data)}>
         <div
           className={`likeBtn ${liked ? 'liked' : ''}`}
