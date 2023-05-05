@@ -21,7 +21,7 @@ const HouseList = () => {
   }
 
   return (
-    <div className='w-100'>
+    <div className='w-100 p-3'>
       <AnimatePresence>
         {activeHouse && (
           <HouseDetails close={closeHouseDetails} data={activeHouse} />

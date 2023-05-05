@@ -39,21 +39,13 @@ const Filter = ({ showFilter }: Prop) => {
               <div>
                 <div className='form__group'>
                   <p>Min Price</p>
-                  <div
-                    className='form__group-input'
-                    style={{ border: '1px solid #000' }}>
-                    $50
-                  </div>
+                  <div className='form__group-input filter__input'>$50</div>
                 </div>
               </div>
               <div>
                 <div className='form__group'>
                   <p>Max Price</p>
-                  <div
-                    className='form__group-input'
-                    style={{ border: '1px solid #000' }}>
-                    $1000+
-                  </div>
+                  <div className='form__group-input filter__input'>$1000+</div>
                 </div>
               </div>
             </div>

@@ -17,12 +17,12 @@
 
   &__button {
     position: sticky;
-    height: 150px;
+    height: 100px;
     left: 0;
     bottom: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding-top: 20px;
     width: 100%;
     border-top: 1px solid #e7e7e7;
@@ -72,12 +72,18 @@
 .place-type__item {
   display: flex;
   align-items: flex-start;
+  flex: 0 0 auto;
   gap: 10px;
   padding: 1rem 0;
 
   p {
     margin: 0;
     font-weight: 500;
+  }
+
+  small {
+    font-size: 14px;
+    color: #717171;
   }
 
   span {
@@ -117,5 +123,13 @@
       background-color: #000;
       color: #fff;
     }
+  }
+}
+
+.filter__input {
+  border: 1px solid #e7e7e7;
+
+  &:hover {
+    border: 1px solid #000;
   }
 }

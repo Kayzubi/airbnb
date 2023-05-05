@@ -1,7 +1,7 @@
 @use '../../breakpoints.scss' as breakpoints;
 
 .sidebar {
-  width: 100px;
+  width: 90px;
   border-right: 1px solid #e7e7e7;
   padding: 1rem 0;
   color: #414141;
@@ -14,10 +14,11 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.1s;
+    font-size: 14px;
   }
 
   span {
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +29,7 @@
     align-items: center;
     padding: 0.5rem 0 0.5rem 2rem;
     gap: 10px;
-    height: 60px;
+    height: 50px;
     cursor: pointer;
 
     &:hover {

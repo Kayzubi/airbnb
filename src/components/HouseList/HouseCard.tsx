@@ -5,7 +5,6 @@ import { HiOutlineHeart } from 'react-icons/hi2'
 import './housecard.scss'
 import { HouseDataTypes } from '../../houses'
 import { numberWithCommas } from '../../utilities'
-import { house2images } from '../../assets'
 
 interface Props {
   data: HouseDataTypes
@@ -17,7 +16,7 @@ const HouseCard: FC<Props> = ({ data, showHouseDetails }) => {
   const [liked, setLiked] = useState(false)
 
   return (
-    <Col lg='3' md='6' className='p-4'>
+    <Col lg='3' md='6' className='pt-3 ps-0 pe-3'>
       <div className='house-card' onClick={() => showHouseDetails(data)}>
         <div
           className={`likeBtn ${liked ? 'liked' : ''}`}

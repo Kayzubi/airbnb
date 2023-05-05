@@ -48,7 +48,8 @@
 
   .btn__close {
     position: fixed;
-    left: 22%;
+    left: 21%;
+    // transform: translateX(-20%);
     top: 20px;
     height: 40px;
     width: 40px;
@@ -151,6 +152,11 @@
     font-size: 2rem;
   }
 
+  &-location {
+    color: #717171;
+    font-size: 14px;
+  }
+
   &-buttons {
     position: absolute;
     top: 0;
@@ -214,10 +220,20 @@
     align-items: center;
     justify-content: center;
   }
+
+  p {
+    color: #717171;
+    font-size: 14px;
+  }
 }
 
 .about-box {
   margin-bottom: 2rem;
+
+  p {
+    color: #717171;
+    font-size: 14px;
+  }
 }
 
 .offer-box {
@@ -267,6 +283,11 @@
   border-radius: 20px;
   border: 1px solid #e7e7e7;
   margin-bottom: 20px;
+
+  p {
+    font-size: 14px;
+    color: #717171;
+  }
 }
 
 .review_header {
@@ -299,7 +320,6 @@
   height: 25rem;
   width: 100%;
   border-radius: 20px;
-  //   max-width: 40rem;
 }
 
 .location {
@@ -311,6 +331,7 @@
   &__about {
     p {
       font-size: 14px;
+      color: #717171;
     }
   }
 }
@@ -408,10 +429,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 14px;
 
     p {
       font-weight: 600;
-      font-size: 14px;
     }
 
     &:not(:last-child) {
@@ -426,7 +447,11 @@
       width: 100%;
       font-weight: 600;
       font-size: 14px;
-      background-color: #ff385c;
+      background: linear-gradient(
+        95.006deg,
+        rgb(211, 59, 80) 0%,
+        rgb(198, 47, 101) 100%
+      );
       border-radius: 12px;
       color: #fff;
     }

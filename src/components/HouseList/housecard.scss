@@ -18,12 +18,12 @@
     flex-direction: column;
 
     h2 {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
     }
 
     p {
-      color: #414141;
+      color: #717171;
     }
   }
 
@@ -33,12 +33,13 @@
 
   &__price {
     margin-top: auto;
-    font-size: 16px;
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .value {
+      color: #000;
       font-weight: 600;
     }
   }
