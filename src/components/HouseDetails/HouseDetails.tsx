@@ -7,6 +7,7 @@ import Checkout from '../Checkout/Checkout'
 import HouseInfo from '../HouseInfo/HouseInfo'
 import HouseImages from '../HouseInfo/HouseImages'
 import AboutHouse from '../HouseInfo/AboutHouse'
+import Reviews from '../HouseInfo/Reviews'
 
 interface Props {
   close: () => void
@@ -23,6 +24,8 @@ const HouseDetails: FC<Props> = ({ close, data }) => {
     baths,
     guests,
     price_per_night,
+    ratings,
+    average_rating,
   } = data
   return (
     <AnimatePresence>
@@ -59,6 +62,7 @@ const HouseDetails: FC<Props> = ({ close, data }) => {
                   baths={baths}
                 />
                 <AboutHouse />
+                <Reviews data={ratings} rating={average_rating} />
               </div>
             </div>
           </div>

@@ -1,0 +1,42 @@
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+
+  p {
+    text-transform: capitalize;
+    font-size: 16px;
+  }
+
+  &__bar-container {
+    width: 50%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__bar {
+    width: 90%;
+    max-width: 380px;
+    height: 8px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #e7e7e7;
+
+    span {
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+      background: linear-gradient(
+        90deg,
+        rgb(211, 59, 80) 0%,
+        rgb(198, 47, 101) 100%
+      );
+    }
+  }
+}

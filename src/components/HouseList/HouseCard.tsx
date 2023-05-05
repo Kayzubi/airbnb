@@ -29,7 +29,7 @@ const HouseCard: FC<Props> = ({ data, showHouseDetails }) => {
         </div>
         <div className='house-card__content'>
           <h2>{name}</h2>
-          <p>{location}</p>
+          <p className='house-card__location'>{location}</p>
           <div className='house-card__price'>
             <p>
               <span className='value'>
@@ -40,7 +40,7 @@ const HouseCard: FC<Props> = ({ data, showHouseDetails }) => {
             <span className='rating'>
               <MdOutlineStar size={20} />
               {average_rating}
-              {average_rating === 5 && '.00'}
+              {average_rating === 5 && '.0'}
             </span>
           </div>
         </div>

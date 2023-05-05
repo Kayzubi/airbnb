@@ -14,6 +14,34 @@ import {
   house9images,
 } from './assets'
 
+export const reviews = [
+  {
+    user: 'Steve',
+    date: 'May 2023',
+    message: `Abbe's place was so wonderful and just what I needed. It was the perfect escape with a great wood stove, beautiful views, horses, and nearby skiing. I'm so grateful.`,
+  },
+  {
+    user: 'Emily',
+    date: 'May 2023',
+    message: `The location was very quiet and peaceful. We loved the wood stove and the location was convenient, however the interior was not in the best shape.`,
+  },
+  {
+    user: 'Micheal',
+    date: 'May 2023',
+    message: `Overall a decent stay. I appreciated having a kitchen and access to firewood for the stove which heated up the little cabin very effectively.`,
+  },
+  {
+    user: 'Jackson',
+    date: 'May 2023',
+    message: `Abbe’s tiny house was a perfect spot to spend the weekend while skiing in the Tetons. The space was comfortable and the wood stove kept us very warm.`,
+  },
+]
+
+export interface RatingType {
+  name: string
+  rating: number
+}
+
 export interface HouseDataTypes {
   id: number
   name: string
@@ -25,14 +53,7 @@ export interface HouseDataTypes {
   guests: number
   baths: number
   average_rating: number
-  ratings: {
-    cleanliness: number
-    accuracy: number
-    communication: number
-    location: number
-    check_in: number
-    value: number
-  }
+  ratings: RatingType[]
 }
 
 export const housesData: HouseDataTypes[] = [
@@ -48,14 +69,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 16,
     baths: 8,
     average_rating: 5,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 2,
@@ -68,14 +107,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 4.5,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 3,
@@ -89,14 +146,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 4.8,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 4,
@@ -110,14 +185,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 4.7,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 5,
@@ -130,14 +223,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 4.5,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 6,
@@ -151,14 +262,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 5,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 7,
@@ -171,14 +300,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 4.8,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 8,
@@ -192,14 +339,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 5,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 9,
@@ -213,14 +378,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 4.9,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 10,
@@ -233,14 +416,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 5,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 11,
@@ -254,14 +455,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 4.5,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 12,
@@ -275,14 +494,32 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 4.9,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
   {
     id: 13,
@@ -295,13 +532,31 @@ export const housesData: HouseDataTypes[] = [
     guests: 8,
     baths: 4,
     average_rating: 4.7,
-    ratings: {
-      cleanliness: 5,
-      accuracy: 4.5,
-      communication: 4.99,
-      location: 4.8,
-      check_in: 4.9,
-      value: 4.2,
-    },
+    ratings: [
+      {
+        name: 'cleanliness',
+        rating: 5,
+      },
+      {
+        name: 'accuracy',
+        rating: 4.5,
+      },
+      {
+        name: 'communication',
+        rating: 4.7,
+      },
+      {
+        name: 'location',
+        rating: 5,
+      },
+      {
+        name: 'Check in',
+        rating: 4.5,
+      },
+      {
+        name: 'value',
+        rating: 4.8,
+      },
+    ],
   },
 ]

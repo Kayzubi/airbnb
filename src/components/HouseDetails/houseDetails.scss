@@ -193,3 +193,47 @@
   cursor: pointer;
   display: block;
 }
+
+.reviews {
+  @extend .about__section;
+  &__top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  &__ratings {
+    padding: 1rem 0;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e7e7e7;
+  }
+}
+
+.user_reviews {
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid #e7e7e7;
+  margin-bottom: 20px;
+}
+
+.review_header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  &-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #000;
+  }
+}
